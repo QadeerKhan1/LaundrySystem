@@ -1,0 +1,48 @@
+#mainCoursoul{
+    height: 500px;
+}
+#mainCoursoul>div>img{
+    width:100%;
+    height: 600px !important;
+    
+}
+.aqkh{
+    position: relative;
+}
+.carsoulParagraph{
+    width: 30%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 15%;
+    color: #fa7b04;
+
+}
+
+.head1 h1{
+    font-size: 35px;
+
+}
+hr {
+    width: 50%;
+    margin-left: 0%;
+    background-color: white;
+  }
+  .carsoulButton{
+    width: 60%;
+    height: 70px;
+
+    text-align: center;
+    align-items: center;
+  }
+  .carsoulButton a{
+   
+    width: 100%;
+    line-height: 50px;
+    border-radius: 33px 33px 33px 33px;
+     font-size: 20px;  
+   display: block;
+   text-align: center;
+   background: #383838;
+
+   }

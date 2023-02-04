@@ -1,0 +1,45 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+.Topbar-Wrape{
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom,#0097d8 0%,#0eb3d4 75%);
+    border: 1px solid darkolivegreen;
+    display: block;
+    position: absolute;
+    
+   
+}
+.ourService{
+    float: left;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.786rem;
+    padding-top: 40px;
+    padding-left: 15%;
+    line-height: 1.2em;
+}
+
+.homeService{
+    display: inline-block;
+    align-items: center;
+    vertical-align: top;
+    letter-spacing: .19em;
+    float: right;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding-top: 40px;
+    padding-right: 20%;
+    line-height: 1.2em;
+    
+
+}
+.homeService>:nth-child(2){
+    margin-left: 15px;
+}
+.homeService>:nth-child(3){
+    margin-left: 10px;
+}

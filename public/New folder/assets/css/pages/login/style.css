@@ -1,0 +1,519 @@
+﻿@font-face {
+    font-family: 'Bahnschrift Light';
+    src: url('../../../fonts/Bahnschrift-Font-Family/BAHNSCHRIFT.TTF');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    color: #fff;
+    font-family: 'Bahnschrift Light';
+    background-image: url("/assets/media/login/font.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.inner-container a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+a, a:link, a:visited {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border-bottom: 4px solid #214158;
+}
+
+    .header .logo {
+        position: absolute;
+        width: 150px;
+        height: 65px;
+        top: 5px;
+        left: 15px;
+        filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.522));
+    }
+
+        .header .logo:hover {
+            filter: drop-shadow(0px 3px 6px rgb(0, 0, 0));
+        }
+
+    .header h4 {
+        text-align: center;
+        font-family: 'Bahnschrift';
+        font-style: normal;
+        font-weight: lighter;
+        font-size: 18px;
+        color: rgba(255,255,255,1);
+        letter-spacing: 2px;
+        white-space: nowrap;
+        line-height: 70px;
+        margin: 0px;
+    }
+
+    .header .menu {
+        position: absolute;
+        top: 0;
+        right: 10px;
+    }
+
+.menu h4 {
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 70px;
+    margin: 0;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 12px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 2px;
+    margin-right: 15px;
+    margin-top: 4px;
+}
+
+    .menu h4 a {
+        color: rgba(255,255,255,1);
+        display: inline-block;
+    }
+
+    .menu h4:hover a {
+        color: rgba(255, 255, 255, 0.548);
+    }
+
+.menu2 {
+    display: none;
+}
+
+.inner-container {
+    position: relative;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    margin: 0 auto;
+    border-top: 4px solid #214158;
+    padding-bottom: 20px;
+}
+
+    .inner-container h4 {
+        text-align: center;
+        font-family: 'Bahnschrift';
+        font-style: normal;
+        font-weight: lighter;
+        font-size: 20px;
+        color: rgba(255,255,255,1);
+        letter-spacing: 2px;
+        margin-top: 40px;
+    }
+
+    .inner-container .login-container, .security-option-container, .access-code-container
+    .Login-help-container {
+        margin-top: 40px;
+    }
+
+.input-username, .input-password, .input-code {
+    width: 211px;
+    height: 35px;
+    display: inline-block;
+    padding-left: 10px;
+    border: none;
+    background-color: #fff;
+    opacity: 0.83;
+}
+
+.text, .mail, .call {
+    width: 258px;
+}
+
+.text {
+    margin-top: 50px;
+}
+
+    .text:hover, .mail:hover, .call:hover {
+        box-shadow: rgba(40, 40, 51, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+        .text:hover .text-text, .mail:hover .text-mail, .call:hover .text-call {
+            background-color: #132431;
+        }
+
+        .text:hover .icon-text, .mail:hover .icon-mail, .call:hover .icon-call {
+            background-color: #132431;
+        }
+
+.text-text, .text-mail, .text-call {
+    background-color: #214158;
+    width: 216px;
+    height: 37px;
+    line-height: 37px;
+    display: inline-block;
+    padding-left: 5px;
+    margin: 0px;
+    text-align: left;
+    white-space: nowrap;
+    font-family: 'Bahnschrift';
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 12px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 1.5px;
+}
+
+    .text-text span, .text-mail span, .text-call span {
+        letter-spacing: 2px;
+        margin-left: 10px;
+        color: rgba(255, 255, 255, 0.719);
+    }
+
+.input-username:focus, .input-password:focus, .input-password:focus {
+    background-color: rgba(255, 255, 255, 0.719);
+}
+
+::placeholder {
+    font-family: 'Bahnschrift';
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 14px;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    font-family: 'Bahnschrift';
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+::-ms-input-placeholder {
+    font-family: 'Bahnschrift';
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.username, .password, .remember-me, .register, .input-submit, .back-button, .text, .mail, .call, .code {
+    margin-left: 70px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.input-username, .input-password, .input-code {
+    outline: none;
+}
+
+.icon-username, .icon-password, .icon-text, .icon-mail, .icon-call, .icon-code, .icon-email {
+    float: left;
+    width: 37px;
+    height: 37px;
+    background-color: #F5F6F8;
+    text-align: center;
+}
+
+.icon-text, .icon-mail, .icon-call {
+    background-color: #214158;
+}
+
+.icon-username svg, .icon-password svg, .icon-code svg {
+    margin-top: 11px;
+    opacity: 0.8;
+}
+
+.icon-text svg {
+    margin-top: 11px;
+    margin-left: 5px;
+}
+
+.icon-mail svg, .icon-call svg {
+    margin-top: 12px;
+    margin-left: 4px;
+}
+
+.input-submit {
+    width: 260px;
+    height: 37px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 2px;
+    background-color: #214158;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+    .input-submit a {
+        color: #fff;
+        line-height: 37px;
+        text-align: center;
+        font-family: 'Bahnschrift';
+        font-style: normal;
+        font-weight: lighter;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+
+.back-button {
+    width: 258px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-family: 'Bahnschrift';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    color: #132431;
+    letter-spacing: 1.5px;
+    background-color: transparent;
+    border: 1px solid #132431;
+}
+
+    .back-button a {
+        color: #132431;
+    }
+
+.input-submit:hover {
+    background-color: #132431;
+    box-shadow: rgba(40, 40, 51, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.back-button:hover {
+    color: #fff;
+    font-weight: lighter;
+    font-size: 14px;
+    background-color: #214158;
+    border: 1px solid #214158;
+    box-shadow: rgba(40, 40, 51, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+    .back-button:hover a {
+        color: #fff;
+    }
+
+.input-remember-me, .input-register {
+    float: left;
+    height: 15px;
+    width: 15px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.829);
+    border: none;
+    cursor: pointer;
+}
+
+label {
+    white-space: nowrap;
+    font-family: 'Bahnschrift';
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 15px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 1.5px;
+    margin-left: 10px;
+}
+
+.register label {
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.forgot-password {
+    margin: 0px;
+    text-align: right;
+    margin-right: 70px;
+    white-space: nowrap;
+    font-family: 'Bahnschrift';
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 12px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 1px;
+}
+
+    .forgot-password a {
+        color: rgba(255,255,255,1);
+    }
+
+    .forgot-password:hover a {
+        color: rgba(255, 255, 255, 0.678);
+    }
+
+.info-text {
+    margin: 20px 70px;
+    text-align: center;
+    font-family: 'Bahnschrift';
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 11px;
+    color: rgba(255,255,255,1);
+    letter-spacing: 1.5px;
+    line-height: 18px;
+}
+.success-text {
+    text-align: center;
+    color: #9efd9e;
+}
+
+.inner-container .denied {
+    color: #F49597;
+}
+
+.inner-container .accepted {
+    color: #B4FFDF;
+}
+
+.d-table {
+    width: 100%;
+    height: calc(100vh - 74px);
+    display: table;
+}
+
+.d-table-cell {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.validation-summary-errors ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+    .validation-summary-errors ul li {
+        color: #f39192;
+        font-size: 13px;
+        background: #ffe5e5;
+        padding: 12px;
+        font-weight: 300;
+    }
+
+input.is-invalid {
+    background-color: #ffd7d7;
+    border-bottom: 3px solid #ff6c6c;
+    transition: .4s;
+}
+.fv-plugins-message-container {
+   text-align:right;
+}
+
+    .fv-plugins-message-container .fv-help-block {
+        color: #F49597;
+    }
+
+@media only screen and (max-width:768px) {
+    .menu h4 {
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-right: 8px;
+    }
+}
+
+@media only screen and (max-width:540px) {
+    .header .logo {
+        width: 120px;
+        height: 55px;
+        top: 12px;
+        left: 5px;
+        filter: none;
+    }
+
+    .header h4 {
+        white-space: wrap;
+        text-align: right;
+        font-size: 20px;
+        letter-spacing: 0px;
+        margin-right: 15px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu2 {
+        width: 255px;
+        height: 20px;
+        position: absolute;
+        display: block;
+        bottom: 10px;
+        right: 10px;
+    }
+
+        .menu2 h4 {
+            display: inline-block;
+            white-space: nowrap;
+            margin: 0;
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 12px;
+            color: rgba(255,255,255,1);
+            letter-spacing: 2px;
+            margin: 0px 10px;
+        }
+
+            .menu2 h4 a {
+                color: rgba(255,255,255,1);
+                text-shadow: 0px 0px 7px #000;
+            }
+
+            .menu2 h4:hover a {
+                color: rgba(255, 255, 255, 0.548);
+            }
+
+    .inner-container {
+        width: 350px;
+    }
+
+    .username, .password, .remember-me, .register, .input-submit, .back-button, .text, .mail, .call, .code {
+        margin-left: 45px;
+    }
+
+    label {
+        text-shadow: 0px 0px 7px #000;
+    }
+
+    .forgot-password {
+        margin-right: 45px;
+        text-shadow: 0px 0px 7px #000;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .header h4 {
+        text-align: right;
+        font-size: 18px;
+        letter-spacing: 0px;
+        margin-right: 5px;
+    }
+
+    .inner-container {
+        top: 50px;
+        width: 300px;
+    }
+
+    .username, .password, .remember-me, .register, .input-submit, .back-button, .text, .mail, .call, .code {
+        margin-left: 20px;
+    }
+
+    label, .info-text {
+        text-shadow: 0px 0px 7px #000;
+    }
+
+    .forgot-password {
+        margin-right: 20px;
+        text-shadow: 0px 0px 7px #000;
+    }
+}
