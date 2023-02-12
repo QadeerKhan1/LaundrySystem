@@ -1,0 +1,52 @@
+
+   .topFooter{
+    
+    text-align: center;
+   }
+.mydiv{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 0% 10% 5% 10%;
+}
+.Topheader{
+    margin-top: 5%;
+    display: inline-block;
+}
+.Topheader h1{
+    
+    font-size: 40px;
+   
+}
+.Topheader hr{
+    width: 40%;
+    height: 1px;
+    
+   margin: 0% auto;
+   margin-top: 30px;
+    background-color: rgb(194, 196, 199);
+}
+.Topheader p{
+    color: rgb(3, 201, 201);
+    font-size: 18px;
+  font-style: italic;
+    margin-top: 30px;
+}
+.mainCardDiv{
+    width: 15%;
+    border: 0;
+    
+    text-align: center;
+    margin-top: 10%;
+
+}
+.cardLogo{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 1px solid black;
+    font-size: 80px;
+    margin: 0% auto;
+    margin-bottom: 30px;
+
+}

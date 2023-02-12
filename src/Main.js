@@ -1,16 +1,17 @@
 import React from 'react'
 
-import App from './component/App'
-import Signup from './component2/signup/signUp'
+import Home from './pages/Home'
+import Signup from './pages/signup/signUp'
+import Services from "./pages/Services/services"
+import CreateAccount from "./pages/signin/createAccount"
+import ContactUs from './pages/contactUs/contactUs'
 
-import AccountPart from './component2/AccountPart'
-import Services from "./component2/Services/services"
 
 export default function Main() {
   return (
     <>
     
-    <Signup/>
+    <Home/>
     </>
   )
 }

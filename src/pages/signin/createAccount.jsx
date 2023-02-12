@@ -1,6 +1,6 @@
 import React from 'react'
 import './createAccount.css';
-export default function createAccount() {
+export default function CreateAccount() {
   return (
     <>
             
@@ -14,11 +14,9 @@ export default function createAccount() {
   <div className="containner">
        
        <div className="create-account">
-    <h2>Create Account</h2>
+    <h2>Login</h2>
     <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required/>
-        <br/>
+        
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required/>
         <br/>
