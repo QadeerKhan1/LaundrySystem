@@ -1,7 +1,7 @@
 import React from 'react'
 import './carsoul.css';
-import img1 from '../Images/first.jpg'
-import aqkhan from '../Images/third.jpg'
+import img1 from '../Images/office.jpg'
+import aqkhan from '../Images/white2.jpg'
 import messi from '../Images/fourth.jpg'
 
 

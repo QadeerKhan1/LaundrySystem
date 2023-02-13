@@ -2,10 +2,41 @@ import React from 'react'
 import ServiceCursole from '../../pages/Services/serviceCursole/serviceCursole'
 import './midCursole.css'
 import { FaSignInAlt } from 'react-icons/fa';
+import { AiFillCar } from 'react-icons/ai';
+
+import { MdCleanHands } from 'react-icons/md';
+import { RiUserReceivedFill } from 'react-icons/ri';
+
+
+
+
+
 
 
 export default function midCursole() {
-  let arr=[2,3,4,5]
+ 
+let myarr={
+  Data:[
+    {
+      logo:<FaSignInAlt/>,
+      action:"SignUp",
+      Des:"Etiam vitae leo et diam pellentesque porta.vel rutrum erat commodo ut. Sed eleifend ultricies risus, vel rutrum erat commodo ut."
+    },{
+      logo:<AiFillCar/>,
+      action:"Pick up",
+      Des:"Etiam vitae leo et diam pellentesque porta. vel rutrum erat commodo ut. Sed eleifend ultricies risus, vel rutrum erat commodo ut."
+    },
+    {
+      logo:<MdCleanHands/>,
+      action:"Cleaning",
+      Des:"Etiam vitae leo et diam pellentesque porta vel rutrum erat commodo ut. Sed eleifend ultricies risus, vel rutrum erat commodo ut."
+    },{
+      logo:<RiUserReceivedFill/>,
+      action:"Delevry",
+      Des:"Etiam vitae leo et diam pellentesque porta.  vel rutrum erat commodo ut. Sed eleifend ultricies risus, vel rutrum erat commodo ut."
+    }
+  ]
+}
   return (
    <>
    <div className="topFooter">
@@ -17,16 +48,18 @@ export default function midCursole() {
         </div>
     
     <div className="mydiv row">
-    {arr.map((ar)=>{
+    {myarr.Data.map((ar)=>{
       return(
-        <div class="mainCardDiv col-md-3 ">
+        <div class="mainCardDiv col-md-3 " >
          <div className="cardLogo"><a href="">
-            <span><FaSignInAlt/></span>
+          <span>{ar.logo}</span>
          </a></div>
-        <h4 class="sc_services_item_title"><a style={{color:"black"}}>SignUp</a>
-        <hr /></h4>
+         <h4 class="sc_services_item_title"><a style={{color:"black"}}>{ar.action}</a>
+            <hr /></h4>
+        
         <div class="sc_services_item_description">
-        <p>Etiam vitae leo et diam pellentesque porta. Sed eleifend ultricies risus, vel rutrum erat commodo ut. Praesent finibus congue euismod. Nullam...</p> </div>
+          <p>{ar.Des}</p>
+        </div>
         </div>
       )
      })}
