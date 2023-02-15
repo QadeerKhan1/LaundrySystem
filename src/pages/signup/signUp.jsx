@@ -1,5 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import "./signUp.css";
+
 export default function signUp() {
   return (
    <>
@@ -47,7 +49,7 @@ export default function signUp() {
     <div class="form-group">
       <button type="submit" class="btn btn-primary">Sign Up</button>
     </div>
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
+    <p>Already have an account? <a href="#"><Link to='/createAccount'>Sign In</Link></a>.</p>
   </form>
 </div>
 

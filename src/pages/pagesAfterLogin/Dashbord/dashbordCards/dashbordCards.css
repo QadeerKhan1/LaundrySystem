@@ -1,0 +1,35 @@
+.waveMainCards{
+    background-color: rgb(159, 162, 165);
+    padding: 1% 2% 1% 2%;
+    
+    
+
+
+}
+.waveSideBar{
+    background-color: black;
+    border-radius: 20px 0px 0px 20px;
+
+    
+}
+.waveCards{
+    border-radius: 0px 20px 20px 0px;
+    background-color: white;
+    
+    height: 600px;
+}
+.waveCardRow{
+    
+}
+.waveCard{
+    width: 22%;
+    height: 130px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-repeat: no-repeat;
+    background-size: 400px 100px;
+    background-position: center bottom;
+    padding-top: 1%;
+    padding-left: 1%;
+    margin: 5px 15px;
+}

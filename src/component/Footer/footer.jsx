@@ -6,7 +6,8 @@ export default function footer() {
   return (
     <>
     <div className="footerMain row">
-        <div className="footer-first ">
+        <div className='col-md-3 col-sm-5 col-8'>
+        <div className="footer-first  ">
             <div className="logo">
                 <img src="https://gowash.ancorathemes.com/wp-content/uploads/2016/06/logo_2x.png" class="logo_main" alt="img"  />
             </div>
@@ -14,7 +15,9 @@ export default function footer() {
                 <h6>Ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Ab illo inventore veritatis et quasi architecto. Ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</h6>
             </div>
         </div>
-        <div className="footer-second">
+        </div>
+       <div className='col-md-3 col-sm-5 col-8' >
+       <div className="footer-second ">
             <div className="blog">
                 <h3>Blog Feed</h3>
                 <hr />
@@ -36,7 +39,9 @@ export default function footer() {
 </ul>
             </div>
         </div>
-        <div className="footer-third">
+       </div>
+       <div className='col-md-3 col-sm-5 col-8'>
+       <div className="footer-third">
          <aside id="nav_menu-3" >
           <h3 class="widget_title">Services</h3>
           <hr />
@@ -51,21 +56,24 @@ export default function footer() {
                 <li className='fas fa-hand-point-right' ><a href="/shoe-shine-available/">Laundry App</a></li>
 </ul></div></aside>
         </div>
-        <div className="footer-fourth">
+       </div>
+        <div className='col-md-3 col-sm-5 col-8'>
+        <div className="footer-fourth ">
             
-        <aside id="text-3" ><h3 >Contact Info</h3> <hr /><div><div class="info">
-                <h2 className='fas fa-female'></h2>
-            <a href="tel:123-456-7890">0332-1970473</a></div>
-            Gmail:
-<span ><a href="mailto:info@yoursitename.com">qadeer1911@gmail.com</a></span>
-
-</div>
-
-<div>
-    facebook : <a href="">A Q KHAN</a>
-</div>
-</aside>
-        
+            <aside id="text-3" ><h3 >Contact Info</h3> <hr /><div><div class="info">
+                    <h2 className='fas fa-female'></h2>
+                <a href="tel:123-456-7890">0332-1970473</a></div>
+                Gmail:
+    <span ><a href="mailto:info@yoursitename.com">qadeer1911@gmail.com</a></span>
+    
+    </div>
+    
+    <div>
+        facebook : <a href="">A Q KHAN</a>
+    </div>
+    </aside>
+            
+            </div>
         </div>
 
     </div>

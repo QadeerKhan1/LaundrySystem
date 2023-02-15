@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './header.css'
+import './headerQuery.css'
 import image from "../Images/third.jpg"
 import care from '../Images/care.jpg';
 import delivery from '../Images/delivery.jpg'
@@ -26,7 +27,6 @@ export default function Header() {
       }
     ]
   }
-  const [arr, setarr] = useState([1,2,3])
   return (
     <>
       <div className="mainHeader">
@@ -35,11 +35,12 @@ export default function Header() {
             <hr />
             <p>Reason TO Choose Us</p>
         </div>
-        <div className="headerCards">
+        <div className="row headerCards ">
         {
           myarr.Data.map((aq)=>{
             return(
-              <div className="card-first">
+              <div className='col-md-4 col-sm-5 headerColCard'>
+                <div className="card-first w-100 ">
             <img src={aq.img} class="card-img-top" alt="..." />
             <div class="card-body">
               <h2 class="card-title">{aq.action}</h2>
@@ -47,6 +48,7 @@ export default function Header() {
               <p class="card-text">{aq.Des} </p>
             </div>
                </div>
+              </div>
 
             )
           })

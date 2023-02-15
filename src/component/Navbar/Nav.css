@@ -42,3 +42,6 @@ nav ul li {
     #orderbtn{
         width: 80%;
     }
+    .nav-item a Link:hover{
+        color: aliceblue;
+    }

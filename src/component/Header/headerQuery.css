@@ -1,0 +1,65 @@
+/* For screens smaller than 576px (e.g. smartphones) */
+@media (max-width: 575.98px) {
+  .card-first {
+    margin-top: 10%;
+  }
+    /* CSS rules here */
+  }
+  
+  /* For screens between 576px and 767.98px (e.g. small tablets) */
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .headerPara h1{
+    
+      font-size: 26px;
+     
+  }
+  .card-first {
+    margin-top: 10%;
+  }
+    /* CSS rules here */
+  }
+  
+  /* For screens between 768px and 991.98px (e.g. large tablets) */ 
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .headerPara h1{
+    
+      font-size: 30px;
+     
+  }
+    .mainHeader{
+      
+      padding: 10% 3% 10% 5%;
+      
+  
+  }
+ 
+    .card-first img{
+      width: 200px;
+      height: 200px;
+  }
+  }
+  
+  /* For screens between 992px and 1199.98px (e.g. laptops) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .mainHeader{
+      
+      padding: 10% 5% 10% 5%;
+      
+  
+  }
+    .card-first img{
+      width: 200px;
+      height: 200px;
+  }
+  .headerPara p{
+    font-size: 16px;
+  
+}
+
+  }
+  
+  /* For screens 1200px and larger (e.g. desktops) */
+  @media (min-width: 1200px) {
+    /* CSS rules here */
+  }
+  

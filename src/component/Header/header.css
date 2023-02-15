@@ -17,6 +17,7 @@
     font-size: 40px;
    
 }
+
 .headerPara hr{
     width: 40%;
     height: 1px;
@@ -37,7 +38,10 @@
     justify-content: space-between;
 }
 .card-first{
-    width: 27%;
+    width: 30%;
+    height: auto;
+    padding: 20 0px 20px 0px;
+    text-align: center;
 }
 .card-first img{
     width: 240px;
@@ -50,7 +54,7 @@
     background-color: aliceblue;
     margin: 0% auto;
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .card-first h2{
     margin-top: 30px;

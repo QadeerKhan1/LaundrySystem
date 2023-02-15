@@ -32,15 +32,16 @@ let myarr={
       Des:"Etiam vitae leo et diam pellentesque porta vel rutrum erat commodo ut. Sed eleifend ultricies risus, vel rutrum erat commodo ut."
     },{
       logo:<RiUserReceivedFill/>,
-      action:"Delevry",
+      action:"Delivery",
       Des:"Etiam vitae leo et diam pellentesque porta.  vel rutrum erat commodo ut. Sed eleifend ultricies risus, vel rutrum erat commodo ut."
     }
   ]
 }
   return (
    <>
+    <ServiceCursole/>
    <div className="topFooter">
-   <ServiceCursole/>
+   
    <div className="Topheader">
             <h1>Clean Clothes Have Never Been This Easy!</h1>
             <hr />
@@ -50,7 +51,9 @@ let myarr={
     <div className="mydiv row">
     {myarr.Data.map((ar)=>{
       return(
-        <div class="mainCardDiv col-md-3 " >
+       
+        <div className="col-md-3 col-sm-5">
+           <div class="mainCardDiv  " >
          <div className="cardLogo"><a href="">
           <span>{ar.logo}</span>
          </a></div>
@@ -61,6 +64,9 @@ let myarr={
           <p>{ar.Des}</p>
         </div>
         </div>
+
+        </div>
+          
       )
      })}
     </div>

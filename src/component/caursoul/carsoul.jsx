@@ -1,8 +1,10 @@
 import React from 'react'
 import './carsoul.css';
+import './mediaQuery.css';
 import img1 from '../Images/office.jpg'
 import aqkhan from '../Images/white2.jpg'
 import messi from '../Images/fourth.jpg'
+import {Link} from 'react-router-dom'
 
 
 
