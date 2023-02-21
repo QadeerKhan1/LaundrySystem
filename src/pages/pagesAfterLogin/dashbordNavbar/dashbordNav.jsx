@@ -1,5 +1,6 @@
 import React from 'react'
 import './dashbordNav.css'
+import Uprofile from '../../../component/Images/mypic.jpg'
 export default function dashbordNav() {
   return (
     <>
@@ -18,9 +19,8 @@ export default function dashbordNav() {
     <li class="navbar-item"><a href="#">Rating</a></li>
     <li class="navbar-item"><a href="#">Contact</a></li>
   </ul>
-  <div class="navbar-logos">
-    <a href="#" class="navbar-login-logo"><img src="" alt="" /></a>
-    
+  <div class="navbar-logo">
+    <img src={Uprofile} alt="" />
   </div>
 </nav>
 
