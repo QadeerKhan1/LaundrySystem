@@ -1,0 +1,17 @@
+.navItems ul li{
+    
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    
+  
+}
+
+.navItems ul li:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+ 
+}

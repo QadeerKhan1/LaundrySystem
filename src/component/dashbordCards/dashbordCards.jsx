@@ -1,8 +1,8 @@
 import React from 'react'
-import svg from '../../../../component/Images/wave.svg';
-import svg1 from '../../../../component/Images/wave3.svg';
-import svg2 from '../../../../component/Images/wave4.svg';
-import svg3 from '../../../../component/Images/wave6.svg';
+import svg from '../Images/wave.svg';
+import svg1 from '../Images/wave3.svg';
+import svg2 from '../Images/wave4.svg';
+import svg3 from '../Images/wave6.svg';
 import DashboardChart from '../dashboardChart/dashboardChart';
 import TopUser from '../topUser/topUser';
 import './dashbordCards.css'

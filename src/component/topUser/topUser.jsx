@@ -1,6 +1,6 @@
 import React from 'react'
 import './topUser.css'
-import icon from '../../../../component/Images/mypic.jpg'
+import icon from '../Images/mypic.jpg'
 export default function topUser() {
     let arr=[2,3,4]
   return (

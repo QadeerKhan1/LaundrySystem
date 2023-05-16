@@ -1,0 +1,101 @@
+
+.orderNav{
+
+}
+.navItems{
+    width: 100%;
+    padding: 0px 10px;
+    background-color: aliceblue;
+
+}
+
+.navItems ul{
+    list-style: none;
+    display: flex;
+    justify-items: center;
+    
+    
+}
+.navItems ul li{
+    
+    width: 20%;
+    height: 50px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    
+  
+}
+
+.navItems ul li:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+ 
+}
+.mylink{
+    color: white;
+    width: 100%;
+    background-color: blue;
+}
+
+.navItems ul li a:hover{
+    color: white;
+}
+.orderTable{
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+.tableHeader{
+    width: 100%;
+    height: 40px;
+    
+    background-color: rgba(0, 0, 0, 0.623);
+
+}
+.tableHeader ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+.tableHeader ul li{
+    font-size: 17px;
+    font-weight: 500;
+    color: white;
+}
+
+.tableContent ul{
+    list-style: none;
+    
+}
+.listDiv{
+    display: flex;
+   border-bottom: 1px solid rgb(223, 218, 218);
+    font-size: 17px;
+    font-weight: 600;
+    padding: 7px 0px;
+}
+
+.one{
+    margin-left: 90px;
+}
+.two{
+    margin-left: 200px;
+}
+.three{
+    margin-left: 160px;
+}
+.four{
+    margin-left: 160px;
+
+}
+.fifth{
+    margin-left: 140px;
+}
+.sixth{
+    margin-left: 150px;
+}
+
+

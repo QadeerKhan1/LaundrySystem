@@ -1,23 +1,25 @@
 import React from 'react'
 import './dashbordNav.css'
+import { Link } from 'react-router-dom'
+
 import Uprofile from '../../../component/Images/mypic.jpg'
 export default function dashbordNav() {
   return (
     <>
     <nav className='dashbordnav'>
   <div class="navbar-logo">
-    <a href="#">Laundry System</a>
+    <a  id='LaundrySystem'>Laundry System</a>
   </div>
   <button class="navbar-toggle">
     <i class="fa fa-bars"></i>
   </button>
   <ul class="navbar-menu">
-    <li class="navbar-item "><a href="#">Dashboard</a></li>
-    <li class="navbar-item"><a href="#">Payment</a></li>
-    <li class="navbar-item"><a href="#">Orders</a></li>
-    <li class="navbar-item"><a href="#">Services</a></li>
-    <li class="navbar-item"><a href="#">Rating</a></li>
-    <li class="navbar-item"><a href="#">Contact</a></li>
+    <li class="navbar-item "><Link to='/' > <a href="#">Dashboard</a></Link> </li>
+    <li class="navbar-item"><Link to='/payment' > <a href="#">Payment</a></Link></li>
+    <li class="navbar-item"><Link to='/orderRouting' > <a href="#">Orders</a></Link></li>
+    <li class="navbar-item"><Link to='/servicesMain' > <a href="#">Services</a></Link></li>
+    <li class="navbar-item"><Link to='/rating' > <a href="#">Rating</a></Link></li>
+    <li class="navbar-item"><Link to='/contact' > <a href="#">Contact</a></Link></li>
   </ul>
   <div class="navbar-logo">
     <img src={Uprofile} alt="" />

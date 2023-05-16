@@ -1,0 +1,35 @@
+.servicesMain{
+
+    width: 100%;
+    height: auto;
+    padding: 5% 10%;
+    
+    
+    
+}
+.serviceRow{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+
+
+}
+.serviceitem{
+ 
+    border-radius: 15px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid #c2acac;
+    text-align: center;
+    
+}
+.serviceImage img{
+    width: 170px;
+    height: 200px;
+
+}
+.serviceFooter{
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+}
