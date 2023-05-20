@@ -1,49 +1,70 @@
 body{
     margin: 0%;
     padding: 0%;
+    
 }
+
+
 .ratingMain{
     width: 100%;
     height: auto;
-    border: 1px solid black;
 
 }
 .ratingHeader{
-    border: solid 1px red;
     width: 100%;
     height: auto;
-    padding: 10% 5% 10% 10%;
+    padding: 2% 5% 5% 5%;
     display: flex;
     justify-content: space-between;
 }
+.ratingHeaderLeft{
+    display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.ratingHeaderCenter{
+    display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
 .ratingHeaderRight{
-    border: 1px solid yellow;
+    display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 .ratingOne{
-    display: flex;
+    display:flex; flex-direction: row;  align-items: center
 }
 .ratingTwo{
     display: flex;
+    display:flex; flex-direction: row;  align-items: center
+
 }
 .ratingThree{
     display: flex;
+    display:flex; flex-direction: row;  align-items: center
+
 }
 .ratingFour{
     display: flex;
+    display:flex; flex-direction: row; align-items: center
+
 }
 .ratingFive{
     display: flex;
+    display:flex; flex-direction: row;  align-items: center
+
 }
 
 hr.new1 {
-    border: 10px solid green;
+    border: 7px solid green;
     border-radius: 5px;
     width: 100%;
     margin-left: 3%;
     
   }
   hr.new2 {
-    border: 10px solid red;
+    border: 7px solid red;
     border-radius: 5px;
     width: 80%;
     margin-left: 3%;
@@ -51,7 +72,7 @@ hr.new1 {
     
   }
   hr.new3 {
-    border: 10px solid rgb(0, 128, 38);
+    border: 7px solid rgb(0, 128, 38);
     border-radius: 5px;
     width: 70%;
     margin-left: 3%;
@@ -59,7 +80,7 @@ hr.new1 {
     
   }
   hr.new4 {
-    border: 10px solid rgb(240, 14, 70);
+    border: 7px solid rgb(240, 14, 70);
     border-radius: 5px;
     width: 60%;
     margin-left: 3%;
@@ -67,10 +88,57 @@ hr.new1 {
     
   }
   hr.new5 {
-    border: 10px solid rgb(5, 190, 181);
+    border: 7px solid rgb(5, 190, 181);
     border-radius: 5px;
     width: 30%;
     margin-left: 3%;
 
     
   }
+  .ratingUserMain{
+    padding-bottom: 3%;
+
+    
+  }
+  
+  
+  .ratingUserLeft{
+   
+  }
+ .ratingUserLeft{
+  display: inline-block;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+ }
+  .ratingUserLeft img{
+    width: 100px;
+    height: 80px;
+  }
+  .ratingUserTop{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+  }
+  .ratingDate{
+    margin-top: 16px;
+    margin-left: 35px;
+  }
+  .ratingUserMiddle{
+    width: 50%;
+  }
+  .ratingbtntwo{
+    margin-left: 50px;
+    font-weight: 600;
+  }
+  .ratingbtnone{
+    font-weight: 600;
+  }
+  .ratingTopBar{
+    width: 100%;
+    height: 50px;
+    margin: 0% auto;
+    background-color: rgb(0, 128, 38);
+    
+
+}

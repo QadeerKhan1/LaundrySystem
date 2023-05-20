@@ -41,27 +41,33 @@ body{
   
   
   
-  .navbar-item.active {
-    border-bottom: 2px solid #fff;
+  .Link.active {
+    border-bottom: 2px solid #ece9e9;
   }
   
-  .navbar-item a {
-    color: #fff;
+  .Link{
+   
+  }
+  .Link{
+    margin: 0% 10px; 
+    color: #ffffff;
     font-size: 20px;
     text-decoration: none;
-    padding: 10px;
+    padding: 16px;
   }
-  .navbar-item a{
-    margin: 0% 10px;
-  }
-  .navbar-item a:hover {
-    background-color: #fff;
+  .Link:hover {
+    background-color: #f7f1f1;
     color: #000;
   }
   
   .navbar-logos {
     display: flex;
     align-items: center;
+    
+  }
+  .aqBrand>img{
+    width: 100px;
+    height: 60px;
   }
   
   .navbar-login-logo {
@@ -70,6 +76,7 @@ body{
     text-decoration: none;
     padding: 10px;
     margin-right: 10px;
+    
   }
   
   .navbar-user-logo img {

@@ -20,8 +20,9 @@ import ReceiveBalance from './pages/pagesAfterLogin/Payment/recieveBalance/recei
 import MyServices from './pages/pagesAfterLogin/Services/myServices/myServices'
 import ManageServices from './pages/pagesAfterLogin/Services/manageServices/manageServices'
 import Rating from './pages/pagesAfterLogin/Rating/Rating'
-import AllReviews from './pages/pagesAfterLogin/Rating/allReviews/allReviews'
-
+import AllReviews from './pages/pagesAfterLogin/Rating/allReviews/allReviews' 
+import Profile from './pages/pagesAfterLogin/Profile/profile'
+import Myinfo from '../src/pages/pagesAfterLogin/Profile/myInformatin/myInfo'
 export default function Main() {
 let user ;
   return (
@@ -57,6 +58,9 @@ let user ;
           <Route exact path="rating" element={<Rating/>} >
           <Route exact path="AllReviews" element={<AllReviews/>} />
             </Route>
+            <Route exact path="profile" element={<Profile/>} >
+            <Route exact path="MyInformation" element={<Myinfo/>} />
+              </Route>
           
           )</>
            }
