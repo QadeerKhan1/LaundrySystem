@@ -7,9 +7,7 @@ export default function orderComp() {
   return (
     <>
         <div className="orderComp">
-        <div className="orderNav">
         
-        </div>
         <div className="orderTable">
           <div className="MainTableDiv">
             <div className="tableHeader">

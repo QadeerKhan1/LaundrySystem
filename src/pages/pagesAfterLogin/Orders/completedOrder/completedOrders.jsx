@@ -8,7 +8,7 @@ export default function completedOrders() {
     <>
        
         <div>
-          completed
+          
         <OrderComp/>
   
         </div>

@@ -9,10 +9,7 @@ export default function mainPayment() {
     <>
     <DashbordNav/>
     <SecondNav first='totalBalance' second='receiveBalance' third='pendingBalance' />
-    <div  className='totalBalance'>
-      <h1>Total Balance recieved from Orders : 234$</h1>
-      
-    </div>
+    
     <Outlet/>
 
     </>

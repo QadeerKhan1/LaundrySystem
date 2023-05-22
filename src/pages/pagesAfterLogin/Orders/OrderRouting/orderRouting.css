@@ -1,3 +1,12 @@
+.navItems {
+    width: 100%;background-color:  rgb(226, 225, 225);
+    
+}
+.navItems ul{
+    width: 100%;
+    background-color: rgb(226, 225, 225);
+    
+}
 .navItems ul li{
     
     width: 20%;
@@ -5,13 +14,22 @@
     text-align: center;
     font-weight: 600;
     font-size: 18px;
+    text-transform: capitalize;
     
   
 }
+.navItems ul li>a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    line-height: 50px;
+    transition: all 0.3s ease;
+}
 
-.navItems ul li:hover{
-    background-color: black;
-    color: white;
+li.myLi>a.active {
+    background-color: rgb(250, 249, 249);
+    color :black;
     cursor: pointer;
+    font-size: x-large;
  
 }

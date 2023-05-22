@@ -1,15 +1,21 @@
 import React from 'react'
 import './createAccount.css';
+import { Link } from 'react-router-dom';
+import img from '../../component/Images/AqBrand2.png'
 export default function CreateAccount() {
   return (
     <>
             
 
   <div >
-  <div className="signbar">
-    <div className="signupLogo">
-      <h6>SignUp</h6>
+  <div className="signUpBar">
+    <div className="signUpLogo">
+      <img src={img} alt="" />
     </div>
+    <div className="signUpDesc">
+    <Link style={{textDecoration:'none',color:"white"}} to="/"><h4>Home</h4></Link>
+      </div>
+
   </div>
   <div className="containner">
        

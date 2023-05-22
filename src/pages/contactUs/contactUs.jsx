@@ -1,7 +1,7 @@
 import React from 'react';
 import './contactUs.css';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom';
 function ContactUs() {
   return (
      
@@ -10,7 +10,11 @@ function ContactUs() {
     <div class="Topbar-Wrape">
       <div className="ourService"><h2>Contact Us</h2></div>
       <div className="homeService">
-        <span>Home</span>
+        <span>
+        <div className="signUpDesc">
+    <Link style={{textDecoration:'none',color:'black'}} to="/"><h4>Home</h4></Link>
+      </div>
+        </span>
         <span>/</span>
         <span>My Info</span>
       </div>

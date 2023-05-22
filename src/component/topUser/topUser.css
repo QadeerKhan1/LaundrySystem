@@ -10,10 +10,10 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 25px;
-    background-color:rgb(180, 178, 178) ;
+    background-color:rgba(255, 255, 255, 0.527) ;
     padding: 1% 0%;
     margin: 10px 0%;
-    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
 }
 .topUserList div{
     width: 200px;

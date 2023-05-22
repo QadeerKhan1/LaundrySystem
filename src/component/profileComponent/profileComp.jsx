@@ -13,8 +13,8 @@ const ProfileComp = () => {
         />
          </div>
         <div className="profile-info">
-          <h1 className="profile-name">John Doe</h1>
-          <p className="profile-location">New York, USA</p>
+          <h1 className="profile-name">Abdul Qadeer</h1>
+          <p className="profile-location">RawalPendi, Pakistan</p>
           
         </div>
      
@@ -28,12 +28,12 @@ const ProfileComp = () => {
      <div className="profile-address col-4">
         <h2 className="address-title">Address</h2>
         <p>123 Main Street</p>
-        <p>New York, USA</p>
+        <p>RawalPendi , Pakistan</p>
       </div>
       <div className="profile-contact col-4">
         <h2 className="contact-title">Contact Information</h2>
-        <p>Email: john.doe@example.com</p>
-        <p>Phone: +1 123-456-7890</p>
+        <p>Email: qadeer1911@gmail.com</p>
+        <p>Phone: 923321970473</p>
       </div>
      </div>
     </div>

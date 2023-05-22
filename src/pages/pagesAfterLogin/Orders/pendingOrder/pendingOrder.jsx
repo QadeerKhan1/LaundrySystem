@@ -6,7 +6,6 @@ import OrderComp from '../../../../component/orderComponent/orderComponent'
 export default function pendingOrder() {
   return (
     <>
-    pending
     <OrderComp/>
 
     </>

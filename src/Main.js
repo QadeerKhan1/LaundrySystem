@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter , Routes, Route } from 'react-router-dom'
+import { BrowserRouter , Routes, Route, Navigate } from 'react-router-dom'
 
 import Home from './pages/Home'
 import Signup from './pages/signup/signUp'
@@ -24,7 +24,7 @@ import AllReviews from './pages/pagesAfterLogin/Rating/allReviews/allReviews'
 import Profile from './pages/pagesAfterLogin/Profile/profile'
 import Myinfo from '../src/pages/pagesAfterLogin/Profile/myInformatin/myInfo'
 export default function Main() {
-let user ;
+let user=1 ;
   return (
     <>
       <BrowserRouter>
@@ -40,25 +40,32 @@ let user ;
           <>
           (
           <Route exact path="/" element={<Dashbord/>} />
+          
           <Route exact path="orderRouting" element={<OrderRouting/>}>
+        <Route index element={<Navigate to="completedOrder"/>} />
           <Route exact path="completedOrder" element={<CompletedOrders/>} />
           <Route exact path="pendingOrder" element={<PendingOrder/>} />
           <Route exact path="cancelOrder" element={<CancelOrder/>} />
           </Route>
           
           <Route exact path="payment" element={<Payment/>} >
+          <Route index element={<Navigate to="totalBalance"/>} />
           <Route exact path="totalBalance" element={<TotalBalance/>} />
           <Route exact path="pendingBalance" element={<PendingBalance/>} />
           <Route exact path="receiveBalance" element={<ReceiveBalance/>} />
           </Route>
           <Route exact path='servicesMain' element={<ServicesMain/>} >
+          <Route index element={<Navigate to="myServices" />} />
+
           <Route exact path="myServices" element={<MyServices/>} />
           <Route exact path="manageServices" element={<ManageServices/>} />
           </Route>
           <Route exact path="rating" element={<Rating/>} >
+          <Route index element={<Navigate to="AllReviews"/>} />
           <Route exact path="AllReviews" element={<AllReviews/>} />
             </Route>
             <Route exact path="profile" element={<Profile/>} >
+            <Route index element={<Navigate to="MyInformation"/>} />
             <Route exact path="MyInformation" element={<Myinfo/>} />
               </Route>
           
