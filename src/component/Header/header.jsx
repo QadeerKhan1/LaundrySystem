@@ -37,9 +37,9 @@ export default function Header() {
         </div>
         <div className="row headerCards ">
         {
-          myarr.Data.map((aq)=>{
+          myarr.Data.map((aq,id)=>{
             return(
-              <div className='col-md-4 col-sm-5 headerColCard'>
+              <div key={id} className='col-md-4 col-sm-5 headerColCard'>
                 <div className="card-first w-100 ">
             <img src={aq.img} class="card-img-top" alt="..." />
             <div class="card-body">

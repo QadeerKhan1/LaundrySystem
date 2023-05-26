@@ -49,10 +49,10 @@ let myarr={
         </div>
     
     <div className="mydiv row">
-    {myarr.Data.map((ar)=>{
+    {myarr.Data.map((ar,id)=>{
       return(
        
-        <div className="col-md-3 col-sm-5">
+        <div key={id} className="col-md-3 col-sm-5">
            <div class="mainCardDiv  " >
          <div className="cardLogo"><a href="">
           <span>{ar.logo}</span>

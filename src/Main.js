@@ -1,5 +1,7 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import { BrowserRouter , Routes, Route, Navigate } from 'react-router-dom'
+
+ import { getAuth } from 'firebase/auth'
 
 import Home from './pages/Home'
 import Signup from './pages/signup/signUp'
@@ -23,23 +25,41 @@ import Rating from './pages/pagesAfterLogin/Rating/Rating'
 import AllReviews from './pages/pagesAfterLogin/Rating/allReviews/allReviews' 
 import Profile from './pages/pagesAfterLogin/Profile/profile'
 import Myinfo from '../src/pages/pagesAfterLogin/Profile/myInformatin/myInfo'
+import { app,auth,database } from '../src/Config/firebaseConfig'
+import CustomerProfile from './component/customerProfileComp/customerNav'
 export default function Main() {
-let user=1 ;
+
+  const [user, setUser] = useState(null);
+ 
+
+
+  // please note that this is not a good practice to use useEffect like this
+  // you should use onAuthStateChanged in a separate file and import it here
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      setUser(user);
+     
+    });
+  }, []);
+
+  //i am still facing the error 
+  // please help me to solve this error
+  // i am not able to solve this error
+  
+
+  
+
+
+  
   return (
     <>
       <BrowserRouter>
         <Routes>
 
          
-          {user ? ( <> <Route exact path="/" element={<Home/>} />
-          <Route exact path="/signup" element={<Signup/>} />
-          <Route exact path="/services" element={<Services/>} />
-          <Route exact path="/createAccount" element={<CreateAccount/>} />
-          <Route exact path="/contactUs" element={<ContactUs/>} /> </> )  :
-
-          <>
+          {user ?  <>
           (
-          <Route exact path="/" element={<Dashbord/>} />
+          <Route exact path="/" element={<CustomerProfile/>} />
           
           <Route exact path="orderRouting" element={<OrderRouting/>}>
         <Route index element={<Navigate to="completedOrder"/>} />
@@ -68,8 +88,16 @@ let user=1 ;
             <Route index element={<Navigate to="MyInformation"/>} />
             <Route exact path="MyInformation" element={<Myinfo/>} />
               </Route>
+            
           
-          )</>
+          )</> :
+          ( <> <Route exact path="/" element={<Home/>} />
+          <Route exact path="/signup" element={<Signup/>} />
+          <Route exact path="/services" element={<Services/>} />
+          <Route exact path="/createAccount" element={<CreateAccount/>} />
+          <Route exact path="/contactUs" element={<ContactUs/>} /> </> )
+
+         
            }
       
         </Routes>
