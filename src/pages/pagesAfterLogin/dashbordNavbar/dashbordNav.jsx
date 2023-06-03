@@ -1,6 +1,6 @@
 import React from 'react'
 import './dashbordNav.css'
-import { Link,NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import Uprofile from '../../../component/Images/mypic.jpg'
 import aqbrand from '../../../component/Images/AqBrand2.png'

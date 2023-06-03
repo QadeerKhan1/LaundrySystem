@@ -1,34 +1,35 @@
-import React,{useState} from 'react'
+import React,{ useContext, useState } from 'react'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import app from '../../Config/firebaseConfig'
 import './createAccount.css';
-
-import { Link,useNavigate } from 'react-router-dom';
-
-import img from '../../component/Images/AqBrand2.png'
+import NavbarBar from '../../component/Navbar/navbarBar';
+import { useNavigate } from 'react-router-dom';
 import SigninOption from '../../signinOption/signinOption';
+import { UserContext } from '../contextApi/userContext';
+
 export default function CreateAccount({option}) {
-  const [userAuth, setUserAuth] = useState({
-    email: "",
-    password: ""});
+
+  const [userAuth, setUserAuth] = useState({ email: "", password: ""});
     const [count,setCount]=useState("")
     const [Loading, setLoading] = useState(false);
-    const [Error, setError] = useState();
+    const { setUserData } = useContext(UserContext);
+
     const nevigat=useNavigate()
+
     const getAuthData = (e) => {
       setUserAuth({ ...userAuth, [e.target.name]: e.target.value });
     };
+
     const auth = getAuth();
+
      const checkAuth = (e) => {
       const {email,password}=userAuth;
-      
-        e.preventDefault();
+      e.preventDefault();
       setLoading(true);
+      
+
       signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
-    const user = userCredential.user;
-    const uid = user.uid;
     
     setLoading(false)
     alert("Login Successfully")
@@ -41,35 +42,19 @@ export default function CreateAccount({option}) {
    
     setLoading(false);
     alert("Please fill all inputs")
-  
-    
   });
- 
-   
     };
     
-
-
   const parent=(option)=>{
-  setCount(option)
+    const userData={Option:option}
+    setUserData(userData)
+  setCount(option) 
 
-  }
-
-    
-
-
+}
   return (
     <>
     {count ? <div >
-  <div className="signUpBar">
-    <div className="signUpLogo">
-      <img src={img} alt="" />
-    </div>
-    <div className="signUpDesc">
-    <Link style={{textDecoration:'none',color:"white"}} to="/"><h4>Home</h4></Link>
-      </div>
-
-  </div>
+  <NavbarBar/>
   <div className="containner">
        
        <div className="create-account">
@@ -96,7 +81,12 @@ export default function CreateAccount({option}) {
 </div>
        
     </div>
-  </div> : (<SigninOption parent={parent}/>)}
+  </div> : (
+  <>
+  <SigninOption parent={parent}/>
+ 
+  </>
+  )}
    
             
 
@@ -104,3 +94,4 @@ export default function CreateAccount({option}) {
     </>
   )
 }
+

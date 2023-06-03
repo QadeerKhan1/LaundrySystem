@@ -4,7 +4,6 @@ import './mediaQuery.css';
 import img1 from '../Images/office.jpg'
 import aqkhan from '../Images/white2.jpg'
 import messi from '../Images/fourth.jpg'
-import {Link} from 'react-router-dom'
 
 
 
@@ -52,7 +51,7 @@ export default function carsoul() {
       <h4>We Will Take Care About Cleaness</h4>
     </div>
     <div className='carsoulButton'>
-    <a href="#" class="btn btn-danger font-weight-bold ">Order Now</a>
+    <a  class="btn btn-danger font-weight-bold ">Order Now</a>
     </div>
 
   </div>

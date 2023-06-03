@@ -2,7 +2,7 @@ import React from 'react'
 import DashbordNav from '../dashbordNavbar/dashbordNav'
 import '../Payment/totalBalance/totalBalance.css'
 import SecondNav from '../Orders/OrderRouting/secondNav'
-import { Link ,Outlet} from 'react-router-dom'
+import { Outlet} from 'react-router-dom'
 export default function mainPayment() {
 
   return (

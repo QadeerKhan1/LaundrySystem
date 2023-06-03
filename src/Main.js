@@ -25,8 +25,10 @@ import Rating from './pages/pagesAfterLogin/Rating/Rating'
 import AllReviews from './pages/pagesAfterLogin/Rating/allReviews/allReviews' 
 import Profile from './pages/pagesAfterLogin/Profile/profile'
 import Myinfo from '../src/pages/pagesAfterLogin/Profile/myInformatin/myInfo'
-import { app,auth,database } from '../src/Config/firebaseConfig'
-import CustomerProfile from './component/customerProfileComp/customerNav'
+import CustomerProfile from './pages/customerModule/customerProfile/customerProfile'
+import CustomerOrder from './pages/customerModule/customerOrder/customerOrder'
+import { auth } from '../src/Config/firebaseConfig'
+import {UserProvider} from './pages/contextApi/userContext'
 export default function Main() {
 
   const [user, setUser] = useState(null);
@@ -54,12 +56,13 @@ export default function Main() {
   return (
     <>
       <BrowserRouter>
+      <UserProvider>
         <Routes>
-
+        
          
           {user ?  <>
           (
-          <Route exact path="/" element={<CustomerProfile/>} />
+          <Route exact path="/" element={<Dashbord/>} />
           
           <Route exact path="orderRouting" element={<OrderRouting/>}>
         <Route index element={<Navigate to="completedOrder"/>} />
@@ -92,7 +95,8 @@ export default function Main() {
           
           )</> :
           ( <> <Route exact path="/" element={<Home/>} />
-          <Route exact path="/signup" element={<Signup/>} />
+          
+          <Route exact path="/signup"  element={<Signup/>} />
           <Route exact path="/services" element={<Services/>} />
           <Route exact path="/createAccount" element={<CreateAccount/>} />
           <Route exact path="/contactUs" element={<ContactUs/>} /> </> )
@@ -101,6 +105,7 @@ export default function Main() {
            }
       
         </Routes>
+        </UserProvider>
       </BrowserRouter>
 
     

@@ -1,19 +1,26 @@
 import React from 'react'
-import './customerNav.css'
+import img1 from '../Images/image3.jpg'
+
 export default function customerHeader() {
   return (
-    <>
-    <div className="customerHeader row">
-    <div className="col-6">
-    <h1>Profile</h1>
-    <h1>dkfkdlfdl</h1>
-        </div>
-        <div className="col-6">
-            kdfl
-
-            </div>
-
+  <>
+    
+    <div className="customerHeaderMain row">
+    <div className="customerHeaderLeft col-4">
+        <h2>Hey , Abdul Qadeer</h2>
+        <p style={{fontWeight:"bold"}} >Are You Looking For Laundry</p>
     </div>
-    </>
+    <div className="customerHeaderRight col-8">
+
+    <img src={img1} alt="" />
+    
+    </div>
+
+   </div>
+
+
+
+  
+  </>
   )
 }

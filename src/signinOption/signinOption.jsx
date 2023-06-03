@@ -2,7 +2,6 @@ import React from 'react'
 import './signinOption.css'
 import { Link } from 'react-router-dom'
 import img from '../component/Images/AqBrand2.png'
-import CreateAccount from '../pages/signin/createAccount'
 
 export default function signinOption({parent}) {
 
@@ -14,6 +13,7 @@ export default function signinOption({parent}) {
   return (
     <>
     <div>
+    
     <div className="signUpBar">
     <div className="signUpLogo">
       <img src={img} alt="" />

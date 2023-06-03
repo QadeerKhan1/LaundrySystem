@@ -1,6 +1,6 @@
 import React from 'react';
 import './profilecomp.css';
-import img from '../Images/mypic.jpg'
+import Img1 from '../Images/mypic.jpg'
 const ProfileComp = () => {
   return (
     <div className="profile-container">
@@ -8,8 +8,8 @@ const ProfileComp = () => {
       <div className="profile-header">
         <img
           className="profile-picture"
-          src={img}
-          alt="Profile Picture"
+          src={Img1}
+          alt="profile"
         />
          </div>
         <div className="profile-info">

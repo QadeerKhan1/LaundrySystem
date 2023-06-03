@@ -6,10 +6,15 @@
     display: flex;
   }
   
+  
   .signUpLogo img{
     width: 130px;
     height: 55px;
   
+  }
+  .signUpLogo span{
+    margin-top: 20px;
+    margin-left: 30px;
   }
   .searchBarWrapper{
     width: 50%;
@@ -45,16 +50,122 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 15px;
-    margin-left: 10px
+    margin-left: 200px
 }
-.customerHeader{
-background-color: white;
-  width: 500px;
-  height: 150px;
-  background-color: #000;
+.customerHeaderMain{
+
+  width: 70%;
+  height: 200px;
+  display: flex;
+  margin: 0% auto;
+  margin-top: 40px;
 }
+.customerHeaderLeft{
   
+     padding: 0px;
+    height: 200px;
+    background-color: rgb(211, 208, 208);
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.customerHeaderRight{
+  padding: 0%;
+  height: 200px;
+}
+.customerHeaderRight img{
+ border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px; 
+    height: 200px;
+  width: 100%;
+  height: 200px
   
+}
+.profileRatedBar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.profileIcon{
+  display: inline;
+  align-items: center;
+  padding: 2%;
+
+}
+
+.Picon{
+  position: relative; width: 40px; height: 40px; overflow: hidden; border-radius: 50%;
+
+}
+.Picon img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.porfileDesc{
+  margin-left: 10px;
+  display: inline-block;
+
+  padding: 0%;
+
+
   
+}
+.porfileDesc :nth-child(2){
+  color: rgb(153, 153, 13);
+}
+.ListMain{
+  margin-top: 20px;
+  padding: 3%;
+}
+.customerOrderWrapper{
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  
+}
+.profileIcon{
+  font-display: flex;
+  position: relative; width: 60px; height: 60px; overflow: hidden; border-radius: 50%;
+}
+.profileIcon img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  
+}
+.profileName{
+  margin-left: 5px;
+}
+.profileName span{
+   
+  width: 200px;
+  height: 20px;
+  color: #000;
+  font-size: 15px;
+}
+.profileRated{
+  width: 50%;
+  display: flex;
+  
+  align-items: center;
+}
+.varticle{
+  border-left: #000 solid 3px;
+  height: 15px;
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.profStar{
+  display: flex;
+  text-align: center;
+  color: #FFB406;
+  font-size: 26px;
+}
   
   

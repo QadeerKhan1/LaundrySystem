@@ -1,7 +1,5 @@
 import React from 'react'
 import './orderComp.css'
-import Routing from '../../pages/pagesAfterLogin/Orders/OrderRouting/orderRouting'
-import { Link ,Outlet} from 'react-router-dom'
 export default function orderComp() {
   const arr=[1,2,3,4,5,6,7,8,9,9]
   return (

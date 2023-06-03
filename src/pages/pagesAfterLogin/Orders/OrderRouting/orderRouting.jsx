@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link ,Outlet} from 'react-router-dom';
+import { Outlet} from 'react-router-dom';
 import DashbordNav from '../../dashbordNavbar/dashbordNav';
 import SecondNav from './secondNav';
 import './orderRouting.css';

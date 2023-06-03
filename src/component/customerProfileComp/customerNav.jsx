@@ -1,7 +1,7 @@
 import React from 'react'
 import './customerNav.css'
 import img from '../Images/AqBrand2.png'
-import { MdLocalLaundryService ,MdForwardToInbox} from 'react-icons/md';
+import {  MdForwardToInbox} from 'react-icons/md';
 import { IoNotificationsOutline } from 'react-icons/io5';
 
 import { RiUserSearchFill } from 'react-icons/ri';
@@ -13,6 +13,7 @@ export default function CustomerNav() {
     
       <div className="signUpLogo">
       <img src={img} alt="" />
+      <span><h4 style={{color:'white'}}>Laundry</h4></span>
     </div>
     <div className="searchBarWrapper">
         <input type="text" placeholder="Search.." name="search" />
