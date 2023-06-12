@@ -4,7 +4,6 @@ import "./signUp.css";
 import { useNavigate } from 'react-router-dom';
 import {  createUserWithEmailAndPassword ,getAuth} from "firebase/auth";
 import NavbarBar from '../../component/Navbar/navbarBar';
-import { set } from 'firebase/database';
 
 
 
@@ -13,8 +12,7 @@ export default function SignUp() {
   const navigate=useNavigate()
   const userData=useContext(UserContext)
   const [user,setUser]=useState(
-    {name:"",email:"",phone:"",password:"",address:""})
-    const [userOption,setUserOption]=useState("")
+    {name:"",email:"",phone:"",password:"",address:"",role:""})
     const auth = getAuth();
     
     useEffect(()=>{
@@ -33,46 +31,38 @@ export default function SignUp() {
 
     const submiteUserData=async(event)=>{
       const { Option } = userData.userData;
-      setUserOption(Option)
 
             event.preventDefault();
-      const{name,email,phone,password,address}=user;
+      const{name,email,phone,password,address,role}=user;
       createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         var user = userCredential.user;
         
         alert("user created successfully")
-        if(name && email && phone && password && address ){
-         const res=fetch(`https://laundry-f31d7-default-rtdb.asia-southeast1.firebasedatabase.app/${userData.userData.Option}/${user.uid}.json`,{
-          // q: why the above api call is creating a child under users id?
-          // q: why the new user node is not being created when we are using new user id?
-
-
+        if(name && email && phone && password && address && role ){
+         const res=fetch(`https://laundry-f31d7-default-rtdb.asia-southeast1.firebasedatabase.app/Users/${user.uid}/profile.json`,{
+        
           method:"POST",
             headers:{ "Content-Type":"application/json"},
-            body:JSON.stringify({ name,email,phone,password,address})
+            body:JSON.stringify({ name,email,phone,password,address,role})
+
+          
           });
           if(res){
-            setUser({name:"",email:"",phone:"",password:"",address:""})
+            setUser({name:"",email:"",phone:"",password:"",address:"",role:''})
             alert('user registered successfully')
             navigate('/'); 
           }
         }else{
           alert("Please Fill All The Data")
-        }
-        // ...
-      })
+
+        } })
       .catch((error) => {
         const errorMessage = error.message;
         // ..
-        alert(errorMessage) });  
-      
-    }
-    
-
-         
-
+        alert(errorMessage) 
+       });    }
     
     
   return (
@@ -106,6 +96,19 @@ export default function SignUp() {
       <label for="address">Address</label>
       <input onChange={getUserData}  name='address' value={user.address} type="text" class="form-control" id="address" placeholder="Enter your address" required/>
     </div>
+    <div className="form-group">
+      
+
+<div class="btn-group">
+<select name="role" className='btn btn-dark' onChange={getUserData} value={user.role}>
+
+      <option selected>Select Role</option>
+      <option value="Customer">Customer</option>
+      <option value="Laundry">Laundry</option>
+    </select>
+</div>
+    </div>
+    
    
     
    

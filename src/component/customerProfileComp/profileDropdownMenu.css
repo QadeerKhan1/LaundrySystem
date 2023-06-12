@@ -1,0 +1,28 @@
+.dropdownStyles  {
+  position: relative,
+  
+};
+.toggleStyles img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.toggleStyles  {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+};
+.menuStyles  {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style:  none;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+};
+
+.menuItemStyles  {
+  padding: 10px;
+};

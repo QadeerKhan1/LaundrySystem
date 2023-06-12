@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
 .navbaR {
     
     background-color: #000;

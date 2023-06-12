@@ -32,6 +32,7 @@ import {UserProvider} from './pages/contextApi/userContext'
 export default function Main() {
 
   const [user, setUser] = useState(null);
+  const [userProfile, setUserProfile] = useState('');
  
 
 
@@ -39,10 +40,34 @@ export default function Main() {
   // you should use onAuthStateChanged in a separate file and import it here
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
+      
       setUser(user);
+      fetch(`https://laundry-f31d7-default-rtdb.asia-southeast1.firebasedatabase.app/Users/${user.uid}/profile.json`)
+      .then(response => response.json())
+      .then(data => {
+        Object.keys(data).forEach(key => {
+          // Access each element using the key
+          
+          var element = data[key];
+          
+          
+          setUserProfile(element.role)
+         
+           
+          // Do something with the element
+        });
+        
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+      });
+      
      
     });
   }, []);
+
+  
+
 
   //i am still facing the error 
   // please help me to solve this error
@@ -60,7 +85,8 @@ export default function Main() {
         <Routes>
         
          
-          {user ?  <>
+          {user ? <>
+          {userProfile === 'Laundry' ? <>
           (
           <Route exact path="/" element={<Dashbord/>} />
           
@@ -93,7 +119,17 @@ export default function Main() {
               </Route>
             
           
-          )</> :
+          )</> : 
+          (
+            <>
+           < Route exact path="/" element={<CustomerProfile/>} />
+          <Route exact path="customerOrder" element={<CustomerOrder/>} />
+          </>
+          )
+           
+           
+          }
+          </> :
           ( <> <Route exact path="/" element={<Home/>} />
           
           <Route exact path="/signup"  element={<Signup/>} />
