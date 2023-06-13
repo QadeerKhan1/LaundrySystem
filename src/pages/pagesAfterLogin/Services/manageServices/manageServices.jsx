@@ -9,7 +9,7 @@ import sheshine from '../../../../component/Images/shoeshine.png'
 import lether from '../../../../component/Images/lathercoat.jpg'
 import shalwarkamees from '../../../../component/Images/shalwarkameez.png'
 import carpet from '../../../../component/Images/carpet.png'
-
+import { getAuth } from 'firebase/auth'
 export default function manageServices() {
     const manageServices=[
         {
@@ -67,11 +67,44 @@ export default function manageServices() {
           itemImage:shalwarkamees
         },
       ]
+      const auth = getAuth();
+      const currentUser = auth.currentUser;
+     if(currentUser){
+      const userId = currentUser.uid; }
+
+     
        
-      const handleService=(selectedService)=>{
-        alert(selectedService.key)
+      const handleService=(itemDescription,itemPrice,val)=>{
+        console.log("val",val)
+        val.itemDescription=itemDescription;
+        val.itemPrice=itemPrice;
+        alert(val.itemDescription)
+
         
+        alert("Service Added Successfully")
+        if(val.itemTitle && itemDescription && itemPrice && val.itemImage){
+        
+            const {itemTitle,itemDescription,itemPrice,itemImage}=val;
+          const res=fetch(`https://laundry-f31d7-default-rtdb.asia-southeast1.firebasedatabase.app/Users/${currentUser.uid}/myServices.json`,{
+        
+          method:"POST",
+            headers:{ "Content-Type":"application/json"},
+            body:JSON.stringify({
+              itemTitle,
+              itemDescription,
+              itemPrice,
+              itemImage
+              
+             })
+
+          
+          });
+        
+
+        }
       }
+
+
 
 
   return (
@@ -82,13 +115,15 @@ export default function manageServices() {
       manageServices.map((val,ind)=>{
         return(
           <>
-          <div key={ind} className='col-3'>
-     <ServiceCard itemTitle={val.itemTitle} 
+          <div className='col-3'>
+     <ServiceCard 
+     key={ind}
+     itemTitle={val.itemTitle} 
      itemDescription={val.itemDescription} 
      itemImage={val.itemImage} 
      priceBtn={val.itemPrice} 
      addRemovebtn={'Add To Cart'} 
-      onClick={()=>handleService(val)}
+      onClick={(itemDescription , itemPrice)=>handleService(itemDescription,itemPrice,val)}
       />
      </div>
           </>

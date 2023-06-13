@@ -1,0 +1,57 @@
+
+export default const manageServices=[
+    {
+      itemTitle:'Shirt',
+      itemDescription:'Item Description',
+      itemPrice:'Price',
+      itemImage:shirt
+    },
+    {
+      itemTitle:'Paint',
+      itemDescription:'Item Description',
+      itemPrice:'Price',
+      itemImage:paint
+    },
+    {
+      itemTitle:'Curtain',
+      itemDescription:'Item Description',
+      itemPrice:'Price',
+      itemImage:curtain
+    },
+    {
+      itemTitle:'blanket',
+      itemDescription:'Item Description',
+      itemPrice:'Price',
+      itemImage:blanket
+    },
+    {
+      itemTitle:'Shoes',
+      itemDescription:'Item Description',
+      itemPrice:'Price',
+      itemImage:shoes
+    },
+    {
+      itemTitle:'Lather',
+      itemDescription:'Item Description',
+      itemPrice:'Price',
+      itemImage:lether
+    },
+    {
+      itemTitle:'Shoe Shine',
+      itemDescription:'Item Description',
+      itemPrice:'Price',
+      itemImage:sheshine
+    },
+    {
+      itemTitle:'Carpet Cleaning',
+      itemDescription:'Item Description',
+      itemPrice:'Price',
+      itemImage:carpet
+    },
+    {
+      itemTitle:'Shalwar Kameez',
+      itemDescription:'Item Description',
+      itemPrice:'Price',
+      itemImage:shalwarkamees
+    },
+  ]
