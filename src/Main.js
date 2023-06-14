@@ -26,6 +26,7 @@ import AllReviews from './pages/pagesAfterLogin/Rating/allReviews/allReviews'
 import Profile from './pages/pagesAfterLogin/Profile/profile'
 import Myinfo from '../src/pages/pagesAfterLogin/Profile/myInformatin/myInfo'
 import CustomerProfile from './pages/customerModule/customerProfile/customerProfile'
+
 import CustomerOrder from './pages/customerModule/customerOrder/customerOrder'
 import { auth } from '../src/Config/firebaseConfig'
 import {UserProvider} from './pages/contextApi/userContext'

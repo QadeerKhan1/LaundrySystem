@@ -8,7 +8,7 @@ export default function completedOrders() {
        
         <div>
           
-        <OrderComp/>
+        <OrderComp componentName={"completedOrders"} />
   
         </div>
         

@@ -1,11 +1,10 @@
-import React,{ useContext, useState,useEffect } from 'react'
+import React,{ useContext, useState } from 'react'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import './createAccount.css';
 import NavbarBar from '../../component/Navbar/navbarBar';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import SigninOption from '../../signinOption/signinOption';
 import { UserContext } from '../contextApi/userContext';
-import { set } from 'local-storage';
 
 export default function CreateAccount({option}) {
 
@@ -79,7 +78,7 @@ export default function CreateAccount({option}) {
   .catch((error) => {
    
     setLoading(false);
-    alert("Please fill all inputs")
+    alert("Email or Password is incorrect")
   });
     };
     const handleLogout =  () => {

@@ -23,7 +23,7 @@ export default function DashbordNav() {
     <>
     <nav className='dashbordnav'>
   <div class="navbar-logos aqBrand">
-    <span><button onClick={handleLogout}>logut</button></span>
+    <span><button className='btn btn btn-dark ' onClick={handleLogout}>logut</button></span>
    <img  src={aqbrand} alt="" />
   </div>
   <button class="navbar-toggle">

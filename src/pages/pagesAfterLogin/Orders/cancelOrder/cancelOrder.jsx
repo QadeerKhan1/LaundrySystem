@@ -4,7 +4,7 @@ export default function cancelOrder() {
   return (
     <>
     
-    <OrderComp/>
+    <OrderComp componentName={"cancelOrder"} />
     </>
   )
 }

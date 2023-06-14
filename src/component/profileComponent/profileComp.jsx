@@ -1,61 +1,78 @@
 import React,{useState,useEffect} from 'react';
 import localStorage, { set } from 'local-storage';
+import { getAuth } from 'firebase/auth';
 import './profilecomp.css';
 import Img1 from '../Images/mypic.jpg'
 const ProfileComp = () => {
   const [change, setchange] = useState(
     {
       Text :{
-        aboutMe:"I am a Full Stack Web Developer. I have done my graduation in Computer Science from University of Gujrat. I have done my FSC from Punjab College of Science. I have done my Matriculation from Government High School.",
+        newGig:"I am a Full Stack Web Developer. I have done my graduation in Computer Science from University of Gujrat. I have done my FSC from Punjab College of Science. I have done my Matriculation from Government High School.",
         Name:"Abdul Qadeer",
         Location:"RawalPendi, Pakistan",
         Email:"qadeer1911@gmail.com",
-        street:"123 Main Street",
+        street:"125 Main Street",
         phone:"923321970473",
+        myDescription:"I am a Full Stack Web Developer. I have done my graduation in Computer Science",
+
        
       },
       Enable: {
-        aboutMe: false,
+        newGig: false,
         Name: false,
         Location: false,
         Email: false,
         street: false,
         phone: false,
+        myDescription:false,
       },
          
 
       
 }
   );
- 
+ const user = getAuth().currentUser;
   useEffect(() => {
-    const aboutMe = localStorage.get('aboutMe');
-    const Name = localStorage.get('name');
-    const Location = localStorage.get('location');
-    const Email = localStorage.get('email');
-    const street = localStorage.get('street');
-    const phone = localStorage.get('phone');
+    const NewGig = localStorage.get('newGig');
+    const name = localStorage.get('name');
+    const location = localStorage.get('location');
+    const email = localStorage.get('email');
+    const Street = localStorage.get('street');
+    const Phone = localStorage.get('phone');
+    const MyDescription=localStorage.get('myDescription')
 
     setchange((prevState) => ({
       ...prevState,
       Text: {
         ...prevState.Text,
-        aboutMe: aboutMe || prevState.Text.aboutMe,
-        Name: Name || prevState.Text.Name,
-        Location: Location || prevState.Text.Location,
-        Email: Email || prevState.Text.Email,
-        street: street || prevState.Text.street,
-        phone: phone || prevState.Text.phone
+        newGig: NewGig || prevState.Text.newGig,
+        Name: name || prevState.Text.Name,
+        Location: location || prevState.Text.Location,
+        Email: email || prevState.Text.Email,
+        street: Street || prevState.Text.street,
+        phone: Phone || prevState.Text.phone,
+        myDescription: MyDescription || prevState.Text.myDescription,
       }
     }));
+
     
+   fetch(`https://laundry-f31d7-default-rtdb.asia-southeast1.firebasedatabase.app/Users/${user.uid}/myInformaion.json`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({NewGig,name,location,email,Street,Phone,MyDescription}),
+    });
+
+
+   
     
   }, []);
 
   const changeEditMode = (option) => {
-    if(option === "aboutMe")
+    if(option === "newGig")
     {
-      setchange({ ...change, Enable: {...change.Enable,aboutMe: true, } });
+      setchange({ ...change, Enable: {...change.Enable,newGig: true, } });
   
     }
     else if(option === "street"){
@@ -73,12 +90,16 @@ const ProfileComp = () => {
     else if(option === "name"){
       setchange({...change,Enable:{...change.Enable,Name:true} })
     }
+    else if(option === "myDescription"){
+      setchange({...change,Enable:{...change.Enable,myDescription:true} })
+    }
+
   };
   const saveChange = (op) => {
 
-    if (op === "aboutMe")
-    {setchange({ ...change,  Enable: { aboutMe: false, } });
-    localStorage.set('aboutMe', change.Text.aboutMe);
+    if (op === "newGig")
+    {setchange({ ...change,  Enable: { newGig: false, } });
+    localStorage.set('newGig', change.Text.newGig);
    }
 
     else if(op === "street"){
@@ -101,11 +122,15 @@ const ProfileComp = () => {
       setchange({ ...change,  Enable: {phone: false,  }});
       localStorage.set('phone', change.Text.phone);
     }
+    else if(op === "myDescription"){
+      setchange({ ...change,  Enable: {myDescription: false,  }});
+      localStorage.set('myDescription', change.Text.myDescription);
+    }
 
 
 
   };
-  const renderEditAboutMe = () => {
+  const renderEditnewGig = () => {
     return ( 
       <>
      <div style={{display:"flex"}}>
@@ -114,11 +139,11 @@ const ProfileComp = () => {
       onChange={(e) => setchange(
         {
           ...e,
-          Text: { ...change.Text,    aboutMe: e.target.value},
-          Enable: { ...change.Enable, aboutMe: true, }      }  )}
+          Text: { ...change.Text,    newGig: e.target.value},
+          Enable: { ...change.Enable, newGig: true, }      }  )}
 
-       defaultValue={change.aboutMe} />
-      <button className="btn btn-black " onClick={()=>{saveChange("aboutMe")}}>Save</button>
+       defaultValue={change.newGig} />
+      <button className="btn btn-black " onClick={()=>{saveChange("newGig")}}>Save</button>
       </div>
       </>  
        ) } 
@@ -185,6 +210,22 @@ const ProfileComp = () => {
               </>
               )
             }
+            const renderEditmyDescription = () => {
+              return (
+                <>
+                <textarea className="descreption-text" defaultValue={change.Text.myDescription} onChange={(e) => setchange(
+                  {
+                    ...e,
+                    Text: { ...change.Text, myDescription: e.target.value },
+                    Enable: { ...change.Enable, myDescription: true} })} />
+                <button className="btn btn-dark" onClick={()=>{saveChange("myDescription")}}>Save</button>
+              </>
+              )
+            }
+            
+
+
+
             const renderDefaultPhone = () => {
               return (
                 <p onClick={()=>{changeEditMode("phone")}} className="descreption-text">phone :{change.Text.phone}</p> )
@@ -207,13 +248,18 @@ const ProfileComp = () => {
                 <p onClick={()=>{changeEditMode("email")}} className="descreption-text">Email:  {change.Text.Email}</p> )
             }
 
-       const renderDefaultAboutMe = () => {
+       const renderDefaultnewGig = () => {
         return (
-          <p onClick={()=>{changeEditMode("aboutMe")}} className="descreption-text">{change.Text.aboutMe}</p> )
+          <p onClick={()=>{changeEditMode("newGig")}} className="descreption-text">{change.Text.newGig}</p> )
       }
       const renderDefaultStreet=()=>{
         return(
           <p onClick={()=>{changeEditMode("street")}} className="address-input">{change.Text.street}</p>
+        )
+      }
+      const renderDefaultmyDescription=()=>{
+        return(
+          <p onClick={()=>{changeEditMode("myDescription")}} className="descreption-text">{change.Text.myDescription}</p>
         )
       }
 
@@ -231,7 +277,7 @@ const ProfileComp = () => {
          </div>
         <div className="profile-info">
           {change.Enable.Name ? (renderEditName()):(renderDefaultName())}
-          {change.Text.Location}
+          {change.Enable.myDescription ? (renderEditmyDescription()):(renderDefaultmyDescription())}
           
         </div>
      
@@ -239,11 +285,11 @@ const ProfileComp = () => {
       
      <div className="profilBottom row">
         <div className="profileDescreption col-4">
-        <h2 className="descreption-title">About Me</h2>
+        <h2 className="descreption-title">Edit Your Gig</h2>
 
-        {change.Enable.aboutMe ?
-         (renderEditAboutMe())
-        : (renderDefaultAboutMe()  )
+        {change.Enable.newGig ?
+         (renderEditnewGig())
+        : (renderDefaultnewGig()  )
           }
 
         </div>

@@ -3,7 +3,7 @@ import OrderComp from '../../../../component/orderComponent/orderComponent'
 export default function totalBalance() {
   return (
     <>
-        <OrderComp/>
+        <OrderComp componentName={"totalBalance"}  />
 
     </>
   )

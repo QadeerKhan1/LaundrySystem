@@ -9,8 +9,10 @@ import sheshine from '../../../../component/Images/shoeshine.png'
 import lether from '../../../../component/Images/lathercoat.jpg'
 import shalwarkamees from '../../../../component/Images/shalwarkameez.png'
 import carpet from '../../../../component/Images/carpet.png'
-import { getAuth } from 'firebase/auth'
-export default function manageServices() {
+import { manageServices } from './srvicesData'
+import { getAuth } from '@firebase/auth'
+export default function ManageServices() {
+
     const manageServices=[
         {
           itemTitle:'Shirt',
@@ -75,11 +77,8 @@ export default function manageServices() {
      
        
       const handleService=(itemDescription,itemPrice,val)=>{
-        console.log("val",val)
         val.itemDescription=itemDescription;
         val.itemPrice=itemPrice;
-        alert(val.itemDescription)
-
         
         alert("Service Added Successfully")
         if(val.itemTitle && itemDescription && itemPrice && val.itemImage){
@@ -93,15 +92,8 @@ export default function manageServices() {
               itemTitle,
               itemDescription,
               itemPrice,
-              itemImage
-              
-             })
-
-          
-          });
-        
-
-        }
+              itemImage })  });
+       }
       }
 
 
@@ -122,7 +114,7 @@ export default function manageServices() {
      itemDescription={val.itemDescription} 
      itemImage={val.itemImage} 
      priceBtn={val.itemPrice} 
-     addRemovebtn={'Add To Cart'} 
+     addRemovebtn={'Add Service'} 
       onClick={(itemDescription , itemPrice)=>handleService(itemDescription,itemPrice,val)}
       />
      </div>

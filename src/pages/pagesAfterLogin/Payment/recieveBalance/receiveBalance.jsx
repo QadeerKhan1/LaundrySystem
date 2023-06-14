@@ -3,7 +3,7 @@ import OrderComp from '../../../../component/orderComponent/orderComponent'
 export default function ReceiveBalance() {
   return (
     <>
-    <OrderComp/>
+    <OrderComp componentName={"receiveBalance"}  />
     </>
   )
 }

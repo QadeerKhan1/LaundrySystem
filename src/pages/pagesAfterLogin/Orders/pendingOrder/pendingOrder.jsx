@@ -5,7 +5,7 @@ import OrderComp from '../../../../component/orderComponent/orderComponent'
 export default function pendingOrder() {
   return (
     <>
-    <OrderComp/>
+    <OrderComp componentName={"pendingOrder"} />
 
     </>
   )

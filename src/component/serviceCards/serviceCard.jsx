@@ -23,6 +23,9 @@ export default function ServiceCard({priceBtn,addRemovebtn,itemTitle,itemDescrip
             onClick(itemDescp,itemPrice)
             
         }
+        else if(addRemovebtn==="Remove"){
+            onClick(itemTitle)
+        }
         else{
             alert("Please chose Item Description and Price")
         }
@@ -57,6 +60,10 @@ export default function ServiceCard({priceBtn,addRemovebtn,itemTitle,itemDescrip
     const handleSave=()=>{
         setItem({
             ...item,
+            text:{
+                ...item.text,
+                itemDescp:item.text.itemDescp
+            },
             enable:{
                 ...item.enable,
                 itemDescp:false
@@ -87,8 +94,13 @@ export default function ServiceCard({priceBtn,addRemovebtn,itemTitle,itemDescrip
                         <>
                          <input type="text" value={item.text.itemDescp}  onChange={EditDescription}  placeholder={itemDescription} />
                          <FcCheckmark onClick={handleSave} style={{fontSize:"20px",marginLeft:"5px", border:"1px solid green",borderRadius:"50%",cursor:"pointer"}}/> 
-                        </>:
-                         <p onClick={getDiscription}>{ itemDescription}</p>
+                        </>:(<>
+                            { addRemovebtn === "Remove" ? (<p onClick={getDiscription}>{ itemDescription}</p>)
+                        :(<p onClick={getDiscription}>{ item.text.itemDescp}</p>)
+                     }
+                        </>
+                         )
+                        
                          
                          }
                     </div>
