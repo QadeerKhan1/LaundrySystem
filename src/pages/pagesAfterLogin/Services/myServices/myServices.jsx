@@ -50,7 +50,6 @@ export default function MyServices() {
 
 
   }
-  console.log(myServicesData)
 
   return (
     <>

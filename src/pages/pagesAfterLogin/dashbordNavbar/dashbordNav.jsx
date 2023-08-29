@@ -23,7 +23,6 @@ export default function DashbordNav() {
     <>
     <nav className='dashbordnav'>
   <div class="navbar-logos aqBrand">
-    <span><button className='btn btn btn-dark ' onClick={handleLogout}>logut</button></span>
    <img  src={aqbrand} alt="" />
   </div>
   <button class="navbar-toggle">
@@ -37,7 +36,9 @@ export default function DashbordNav() {
     <li class="navbar-item"><NavLink className='Link' activeClassName="active" to='/rating' > Rating</NavLink></li>
     <li class="navbar-item"><NavLink className='Link' activeClassName="active" to='/profile' >  Profile</NavLink></li>
   </ul>
-  <div class="navbar-logo">
+  <div class="navbar-logo" style={{display:'flex',marginRight:"5px"}}>
+  <div><button type="button" style={{borderColor:'gray',borderRadius:"10px",height:"35px",background:"black",marginTop:"10px"}} onClick={handleLogout} class="btn btn-dark">Logout</button>
+</div>
     <img src={Uprofile} alt="" />
   </div>
 </nav>

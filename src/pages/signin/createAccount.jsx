@@ -44,9 +44,10 @@ export default function CreateAccount({option}) {
       if( data && element.role === User)
       {
         nevigat("/")
+        console.log(element)
       
         setTimeout(() => {
-          alert(`Login Successfully Welcome ${User} `)
+          alert(`Login Successfully Welcome ${element.name} `)
           }
           , 1000);
       }else{

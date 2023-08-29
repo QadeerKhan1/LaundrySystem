@@ -114,7 +114,7 @@ export default function SignUp() {
    
     <div className="form-group">
       <button style={{width:'25%',height:"40px"}} onClick={submiteUserData}  type="submite" className="btn btn-outline-white bg-black  mx-10">Sign Up</button>
-      <button style={{width:'25%',height:"40px" ,marginLeft:"150px"}} onClick={()=>{navigate("/createAccount")}} type="button" className="btn btn-outline-white bg-black  " >Login</button>
+      <button style={{width:'25%',height:"40px" ,marginLeft:"150px"}} onClick={()=>{navigate("/createAccount")}} type="button" className="btn btn-outline-white bg-black  " >Have an account</button>
     </div>
      
   </form>

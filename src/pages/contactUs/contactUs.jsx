@@ -30,19 +30,19 @@ function ContactUs() {
       <div className="contact-card">
         <FaMapMarkerAlt />
         <h3>Address</h3>
-        <p>123 Main Street<br />Anytown, USA 12345</p>
+        <p>123 Main Street<br />Hangu , M.khwaja </p>
       </div>
 
       <div className="contact-card">
         <FaPhone />
         <h3>Phone</h3>
-        <p>(123) 456-7890</p>
+        <p>(092) 3321970473</p>
       </div>
 
       <div className="contact-card">
         <FaEnvelope />
         <h3>Email</h3>
-        <p>info@example.com</p>
+        <p>qadeer1911@example.com</p>
       </div>
     </div>
 

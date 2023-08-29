@@ -34,7 +34,7 @@ export default function CustomerList() {
     <>
     <div className="ListMain row">
       <span ><h2>Most Rated Laundries :</h2></span>
-    {laundryProfiles.map((item,ind)=>{
+    {list.map((item,ind)=>{
       return(
         <>
         <div className="card col-4 " style={{width:"23rem",marginTop:'20px',marginRight:"20px"}} >
@@ -46,12 +46,12 @@ export default function CustomerList() {
         <img src={conv} className="card-img-top rounded " alt="..."/>
         </div>
             <div className="porfileDesc">
-              <span><h6>{item.myInformaion.name}</h6></span>
+              <span><h6>A Q KHAN</h6></span>
               <span>Top rate seller</span>
             </div>
           </div>
      n <div className="card-body">
-        <p style={{margin:'0px'}} className="card-text">{item.myInformaion.MyDescription}</p>
+        <p style={{margin:'0px'}} className="card-text">We have twenty four year service to wash and dry clothes</p>
     <span style={{color: "yellow",fontSize:"30px",margin:'0px'}}> <AiFillStar  /><span style={{color:'black',fontSize:"20px"}}> 5.0 (154)</span></span>
       </div>
       </div>

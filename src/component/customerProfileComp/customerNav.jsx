@@ -29,9 +29,10 @@ export default function CustomerNav() {
       
 
       <span><h4 style={{color:'white'}}>Laundry</h4></span>
-      <button type="button" onClick={handleLogout} class="btn btn-dark">Logout</button>
+      
     </div>
     <div className="searchBarWrapper">
+      
         <input type="text" placeholder="Search.." name="search" />
         <li type="submit"><RiUserSearchFill/></li>
     </div>
@@ -39,6 +40,8 @@ export default function CustomerNav() {
     <div><IoNotificationsOutline/></div>
     <div><MdForwardToInbox/></div>
     <div><CgProfile /></div>
+    <div><button type="button" style={{borderColor:'gray',borderRadius:"10px",height:"35px",background:"black",marginTop:"10px"}} onClick={handleLogout} class="btn btn-dark">Logout</button>
+</div>
 
     </div>
    
